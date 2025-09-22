@@ -18,7 +18,7 @@ int main() {
 
     printf("Waiting for client...\n");
     int client = accept(sock, NULL, NULL);
-    char buf[256];
+    char buf[256]; // screen 20x4 likely  
     while (fgets(buf, sizeof(buf), stdin)) {
         send(client, buf, strlen(buf), 0);
     }
